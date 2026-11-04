@@ -62,6 +62,6 @@ xcodebuild -project apple_lab11_02_SwiftUI_SwiftData/apple_lab11_02_SwiftUI_Swif
 
 La firma está desactivada para las compilaciones del simulador. Para un dispositivo físico se debe configurar la firma y el equipo en Xcode.
 
-El informe de ejecución real, incidencias y estado de publicación está en `documentos/VALIDACION.md`. Los resultados `.xcresult` se conservan localmente en `.build/`, excluido de Git.
+La revisión paso a paso de los 23 pasos de la guía está en [documentos/AUDITORIA.md](documentos/AUDITORIA.md). El informe de ejecución inicial e incidencias está en `documentos/VALIDACION.md`. Los resultados `.xcresult` se conservan localmente en `.build/`, excluido de Git.
 
-No se implementaron Parte 3, trabajo de la semana, Ventas, Compras, login, usuarios ni roles. No se modificó `main`.
+No se implementaron Parte 3, trabajo de la semana, Ventas, Compras, login, usuarios ni roles. El contenido de `main` permanece igual; su historial se actualizó únicamente para corregir la autoría inicial, por instrucción de la propietaria.

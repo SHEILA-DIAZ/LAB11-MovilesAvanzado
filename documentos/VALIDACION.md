@@ -65,8 +65,8 @@ Se conservaron nombres, atributos, APIs, arquitectura y pantallas de cada activi
 
 ## Git y publicación
 
-Se crearon commits progresivos reales con las etapas compiladas: base UIKit; modelo y CRUD Contacto; búsqueda, Grupo y pruebas; base SwiftData con Alumno y contenedor; registro/listado/eliminación; edición, búsqueda, Curso y pruebas. Consultar `git log --oneline origin/ia-asistida..HEAD` para sus hashes.
+Se crearon commits progresivos reales con las etapas compiladas: base UIKit; modelo y CRUD Contacto; búsqueda, Grupo y pruebas; base SwiftData con Alumno y contenedor; registro/listado/eliminación; edición, búsqueda, Curso y pruebas. Consultar `git log --oneline ia-asistida` para el historial publicado.
 
-Se ejecutó `git push origin ia-asistida` tras las etapas. GitHub rechazó los push con **HTTP 403**, indicando `Permission to SHEILA-DIAZ/LAB11-MovilesAvanzado.git denied to Jamestecsup`. Las credenciales disponibles corresponden a Jamestecsup y no tienen acceso de escritura a ese repositorio. Los commits permanecen locales y pendientes de publicación. No se alteraron credenciales ni main.
+Se ejecutó `git push origin ia-asistida` tras las etapas. GitHub rechazó los push con **HTTP 403**, indicando `Permission to SHEILA-DIAZ/LAB11-MovilesAvanzado.git denied to Jamestecsup`. En ese momento las credenciales correspondían a Jamestecsup, sin permiso de escritura. Esta incidencia se resolvió posteriormente autenticando a SHEILA-DIAZ y publicando los seis commits.
 
-Para publicar al disponer de una cuenta con permisos: `git push origin ia-asistida`. No requiere rehacer los commits. No hay funcionalidades pendientes dentro de las actividades 01 y 02.
+Por instrucción posterior de la propietaria se corrigieron autor y committer del commit inicial, preservando todos los demás metadatos y los árboles de ambas ramas. El nuevo commit inicial es d427f69; las ramas main e ia-asistida se publicaron con leases explícitos y actualización atómica, y se verificaron mediante la API de GitHub. No hay funcionalidades pendientes dentro de las actividades 01 y 02. La auditoría ampliada, con la matriz completa de requisitos y nuevos resultados, está en AUDITORIA.md.

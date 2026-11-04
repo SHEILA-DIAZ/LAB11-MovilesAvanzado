@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nav">
+<device id="retina6_12" orientation="portrait" appearance="light"/>
+<dependencies><plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24400"/><capability name="Safe area layout guides" minToolsVersion="9.0"/><capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/></dependencies>
+<scenes>
+<scene sceneID="navScene"><objects>
+<navigationController id="nav" sceneMemberID="viewController"><navigationBar key="navigationBar" contentMode="scaleToFill" id="bar"><rect key="frame" x="0.0" y="0.0" width="393" height="44"/></navigationBar><connections><segue destination="vc" kind="relationship" relationship="rootViewController" id="root"/></connections></navigationController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="firstNav" sceneMemberID="firstResponder"/>
+</objects></scene>
+<scene sceneID="mainScene"><objects>
+<viewController id="vc" customClass="ViewController" customModule="apple_lab11_01_UIKit_CoreData" customModuleProvider="target" sceneMemberID="viewController">
+<view key="view" contentMode="scaleToFill" id="view"><rect key="frame" x="0.0" y="0.0" width="393" height="852"/><autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews><tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" estimatedRowHeight="64" translatesAutoresizingMaskIntoConstraints="NO" id="table">
+<rect key="frame" x="0.0" y="103" width="393" height="715"/>
+<prototypes><tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" reuseIdentifier="Cell" textLabel="name" detailTextLabel="detail" style="IBUITableViewCellStyleSubtitle" id="cell"><rect key="frame" x="0.0" y="50" width="393" height="64"/><autoresizingMask key="autoresizingMask"/><tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cell" id="content"><rect key="frame" x="0.0" y="0.0" width="366" height="64"/><autoresizingMask key="autoresizingMask"/><subviews><label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Nombre" id="name"><rect key="frame" x="20" y="12" width="300" height="22"/><autoresizingMask key="autoresizingMask"/><fontDescription key="fontDescription" type="system" pointSize="17"/></label><label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Teléfono | Dirección" id="detail"><rect key="frame" x="20" y="36" width="300" height="16"/><autoresizingMask key="autoresizingMask"/><fontDescription key="fontDescription" type="system" pointSize="12"/></label></subviews></tableViewCellContentView></tableViewCell></prototypes></tableView></subviews>
+<viewLayoutGuide key="safeArea" id="safe"/>
+<constraints><constraint firstItem="table" firstAttribute="top" secondItem="safe" secondAttribute="top" id="top"/><constraint firstItem="table" firstAttribute="leading" secondItem="view" secondAttribute="leading" id="leading"/><constraint firstItem="table" firstAttribute="trailing" secondItem="view" secondAttribute="trailing" id="trailing"/><constraint firstItem="table" firstAttribute="bottom" secondItem="safe" secondAttribute="bottom" id="bottom"/></constraints>
+</view>
+<navigationItem key="navigationItem" title="Lista de Contactos - Tecsup" id="item"><barButtonItem key="rightBarButtonItem" systemItem="add" id="add"><connections><action selector="agregarContacto:" destination="vc" id="addAction"/></connections></barButtonItem></navigationItem>
+<connections><outlet property="TablaContacto" destination="table" id="tableOutlet"/></connections>
+</viewController><placeholder placeholderIdentifier="IBFirstResponder" id="first" sceneMemberID="firstResponder"/>
+</objects></scene>
+</scenes></document>

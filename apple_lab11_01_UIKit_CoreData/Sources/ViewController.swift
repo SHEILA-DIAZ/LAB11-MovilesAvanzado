@@ -9,6 +9,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
+        let apariencia = UINavigationBarAppearance()
+        apariencia.configureWithDefaultBackground()
+        navigationController?.navigationBar.standardAppearance = apariencia
+        navigationController?.navigationBar.scrollEdgeAppearance = apariencia
         TablaContacto.dataSource = self
         TablaContacto.delegate = self
         TablaContacto.accessibilityIdentifier = "contactos"
@@ -21,10 +26,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         definesPresentationContext = true
         let grupo = UIBarButtonItem(title: "Grupo demo", style: .plain, target: self, action: #selector(asignarGrupoDemo))
         grupo.accessibilityIdentifier = "grupoDemo"
-        navigationItem.leftBarButtonItem = grupo
         let filtro = UIBarButtonItem(title: "Ver Amigos", style: .plain, target: self, action: #selector(alternarGrupo))
         filtro.accessibilityIdentifier = "filtroGrupo"
-        toolbarItems = [UIBarButtonItem(systemItem: .flexibleSpace), filtro, UIBarButtonItem(systemItem: .flexibleSpace)]
+        toolbarItems = [grupo, UIBarButtonItem(systemItem: .flexibleSpace), filtro]
         navigationController?.isToolbarHidden = false
         mostrarRutaBaseDeDatos()
         cargarInfoCoreData()

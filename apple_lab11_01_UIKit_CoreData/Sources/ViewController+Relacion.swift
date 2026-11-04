@@ -27,7 +27,7 @@ extension ViewController: UISearchResultsUpdating {
 
     @objc func alternarGrupo() {
         soloAmigos.toggle()
-        toolbarItems?[1].title = soloAmigos ? "Ver todos" : "Ver Amigos"
+        toolbarItems?.first(where: { $0.accessibilityIdentifier == "filtroGrupo" })?.title = soloAmigos ? "Ver todos" : "Ver Amigos"
         cargarInfoCoreData()
     }
 

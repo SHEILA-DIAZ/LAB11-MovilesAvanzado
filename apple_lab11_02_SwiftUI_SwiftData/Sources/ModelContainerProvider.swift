@@ -7,7 +7,7 @@ class ModelContainerProvider {
     let container: ModelContainer
 
     private init() {
-        let schema = Schema([Alumno.self])
+        let schema = Schema([Alumno.self, Curso.self])
         do {
             let directory = try FileManager.default.url(for: .applicationSupportDirectory,
                                                        in: .userDomainMask, appropriateFor: nil, create: true)

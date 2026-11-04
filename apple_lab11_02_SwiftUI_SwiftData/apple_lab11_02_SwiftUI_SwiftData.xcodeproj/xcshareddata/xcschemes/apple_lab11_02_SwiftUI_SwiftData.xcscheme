@@ -39,7 +39,31 @@
          </BuildableReference>
       </MacroExpansion>
       <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5FA0C1FF03B48D4BDFA94C5C"
+               BuildableName = "AlumnoTests.xctest"
+               BlueprintName = "AlumnoTests"
+               ReferencedContainer = "container:apple_lab11_02_SwiftUI_SwiftData.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "400A58FFBFC35019C8268B07"
+               BuildableName = "AlumnoUITests.xctest"
+               BlueprintName = "AlumnoUITests"
+               ReferencedContainer = "container:apple_lab11_02_SwiftUI_SwiftData.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <CommandLineArguments>
+      </CommandLineArguments>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"

@@ -20,8 +20,30 @@ targets:
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
         INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
         INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
+  AlumnoTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [Tests]
+    dependencies:
+      - target: apple_lab11_02_SwiftUI_SwiftData
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: pe.tecsup.lab11.alumnos.tests
+        GENERATE_INFOPLIST_FILE: YES
+  AlumnoUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: [UITests]
+    dependencies:
+      - target: apple_lab11_02_SwiftUI_SwiftData
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: pe.tecsup.lab11.alumnos.uitests
+        GENERATE_INFOPLIST_FILE: YES
 schemes:
   apple_lab11_02_SwiftUI_SwiftData:
     build:
       targets:
         apple_lab11_02_SwiftUI_SwiftData: all
+    test:
+      targets: [AlumnoTests, AlumnoUITests]

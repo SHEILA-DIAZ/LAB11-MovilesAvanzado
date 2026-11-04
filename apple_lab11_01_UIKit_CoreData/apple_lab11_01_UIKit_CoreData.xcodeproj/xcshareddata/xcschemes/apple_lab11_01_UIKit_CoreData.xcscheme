@@ -39,7 +39,31 @@
          </BuildableReference>
       </MacroExpansion>
       <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0F6A39C66D2B00AA650AA459"
+               BuildableName = "ContactoTests.xctest"
+               BlueprintName = "ContactoTests"
+               ReferencedContainer = "container:apple_lab11_01_UIKit_CoreData.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B2C46BEC7389DF10D40465C3"
+               BuildableName = "ContactoUITests.xctest"
+               BlueprintName = "ContactoUITests"
+               ReferencedContainer = "container:apple_lab11_01_UIKit_CoreData.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <CommandLineArguments>
+      </CommandLineArguments>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"

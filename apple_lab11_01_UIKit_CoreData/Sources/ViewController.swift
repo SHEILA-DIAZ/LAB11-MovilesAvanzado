@@ -4,6 +4,8 @@ import CoreData
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var TablaContacto: UITableView!
     var contactos = [Contacto]()
+    let buscador = UISearchController(searchResultsController: nil)
+    var soloAmigos = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -11,6 +13,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         TablaContacto.delegate = self
         TablaContacto.accessibilityIdentifier = "contactos"
         navigationItem.rightBarButtonItem?.accessibilityIdentifier = "agregarContacto"
+        buscador.searchResultsUpdater = self
+        buscador.obscuresBackgroundDuringPresentation = false
+        buscador.searchBar.placeholder = "Buscar por nombre"
+        navigationItem.searchController = buscador
+        navigationItem.hidesSearchBarWhenScrolling = false
+        definesPresentationContext = true
+        let grupo = UIBarButtonItem(title: "Grupo demo", style: .plain, target: self, action: #selector(asignarGrupoDemo))
+        grupo.accessibilityIdentifier = "grupoDemo"
+        navigationItem.leftBarButtonItem = grupo
+        let filtro = UIBarButtonItem(title: "Ver Amigos", style: .plain, target: self, action: #selector(alternarGrupo))
+        filtro.accessibilityIdentifier = "filtroGrupo"
+        toolbarItems = [UIBarButtonItem(systemItem: .flexibleSpace), filtro, UIBarButtonItem(systemItem: .flexibleSpace)]
+        navigationController?.isToolbarHidden = false
         mostrarRutaBaseDeDatos()
         cargarInfoCoreData()
     }
@@ -27,10 +42,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     // READ: la tabla muestra el resultado del fetch, ordenado alfabéticamente.
     func cargarInfoCoreData() {
-        let request: NSFetchRequest<Contacto> = Contacto.fetchRequest()
-        request.sortDescriptors = [NSSortDescriptor(key: "nombre", ascending: true)]
         do {
-            contactos = try conexion().fetch(request)
+            contactos = try consultarContactos(texto: buscador.searchBar.text ?? "", nombreGrupo: soloAmigos ? "Amigos" : nil)
             TablaContacto.reloadData()
         } catch { mostrarError(error) }
     }
@@ -80,7 +93,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let celda = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let contacto = contactos[indexPath.row]
         celda.textLabel?.text = contacto.nombre
-        celda.detailTextLabel?.text = "\(contacto.telefono ?? "") | \(contacto.direccion ?? "")"
+        celda.detailTextLabel?.text = "\(contacto.telefono ?? "") | \(contacto.direccion ?? "") | \(contacto.grupo?.nombre ?? "Sin grupo")"
         return celda
     }
 

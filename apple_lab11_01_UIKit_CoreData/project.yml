@@ -21,8 +21,30 @@ targets:
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
         INFOPLIST_KEY_UIApplicationSceneManifest_Generation: NO
         INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
+  ContactoTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [Tests]
+    dependencies:
+      - target: apple_lab11_01_UIKit_CoreData
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: pe.tecsup.lab11.contactos.tests
+        GENERATE_INFOPLIST_FILE: YES
+  ContactoUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: [UITests]
+    dependencies:
+      - target: apple_lab11_01_UIKit_CoreData
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: pe.tecsup.lab11.contactos.uitests
+        GENERATE_INFOPLIST_FILE: YES
 schemes:
   apple_lab11_01_UIKit_CoreData:
     build:
       targets:
         apple_lab11_01_UIKit_CoreData: all
+    test:
+      targets: [ContactoTests, ContactoUITests]

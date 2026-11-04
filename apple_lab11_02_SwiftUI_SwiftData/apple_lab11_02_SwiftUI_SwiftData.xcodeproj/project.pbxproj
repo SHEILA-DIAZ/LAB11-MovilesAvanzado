@@ -11,9 +11,11 @@
 		4CA7381E88AD76887A3D0CB0 /* apple_lab11_02_SwiftUI_SwiftDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88144F82A6167CFE4FDBA449 /* apple_lab11_02_SwiftUI_SwiftDataApp.swift */; };
 		736C10DCD140D1863DE9B0A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A2C0EE227A62FB2A024266 /* ContentView.swift */; };
 		9861A1B5BBAEFACA05B09F50 /* ModelContainerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F262A2730B309BD005C3D29A /* ModelContainerProvider.swift */; };
+		E048E2062B884786F8A335BB /* NuevoAlumnoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A168B92AA70DC949A5F5E2A /* NuevoAlumnoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A168B92AA70DC949A5F5E2A /* NuevoAlumnoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevoAlumnoView.swift; sourceTree = "<group>"; };
 		88144F82A6167CFE4FDBA449 /* apple_lab11_02_SwiftUI_SwiftDataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apple_lab11_02_SwiftUI_SwiftDataApp.swift; sourceTree = "<group>"; };
 		A134BC682BCB11837ED31918 /* apple_lab11_02_SwiftUI_SwiftData.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = apple_lab11_02_SwiftUI_SwiftData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0DFD782B68E970199B680E4 /* Alumno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alumno.swift; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 				88144F82A6167CFE4FDBA449 /* apple_lab11_02_SwiftUI_SwiftDataApp.swift */,
 				F6A2C0EE227A62FB2A024266 /* ContentView.swift */,
 				F262A2730B309BD005C3D29A /* ModelContainerProvider.swift */,
+				5A168B92AA70DC949A5F5E2A /* NuevoAlumnoView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -107,6 +110,7 @@
 				2647B39C20A03F498F9792E9 /* Alumno.swift in Sources */,
 				736C10DCD140D1863DE9B0A5 /* ContentView.swift in Sources */,
 				9861A1B5BBAEFACA05B09F50 /* ModelContainerProvider.swift in Sources */,
+				E048E2062B884786F8A335BB /* NuevoAlumnoView.swift in Sources */,
 				4CA7381E88AD76887A3D0CB0 /* apple_lab11_02_SwiftUI_SwiftDataApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
